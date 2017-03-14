@@ -1,0 +1,118 @@
+body{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #949cd1;
+  font-family: 'Rambla', sans-serif;
+
+  .player{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 360px;
+    height: 480px;
+    background-color: #f3f4f8;
+    border-radius: 30px;
+    overflow: hidden;
+
+    transform: translate(-50%, -50%);
+
+    .main{
+      backgorund-color: #eeeff5;
+      .display{
+        position: relative;
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        background-image: url('https://s-media-cache-ak0.pinimg.com/236x/ff/29/a1/ff29a15994345097b90c7f00ee8c2e1a.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(84, 66, 130, 0.26);
+        }
+
+        nav{
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          right: 0;
+
+          width: 100%;
+          height: 65px;
+          background-color: rgba(0, 0, 0, .60);
+        }
+        section.info{
+          position: absolute;
+          z-index: 10;
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+          min-height: 65px;
+          background-color: rgba(42, 34, 77, 0.6);
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h2, h3{
+
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+          }
+
+          h2{
+            font-size: 18px;
+            font-weight: 600;
+          }
+          h3{
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+      .options{
+        input[type="range"]{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.options{
+  position: relative;
+  z-index: 10;
+
+  .range-slider{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 7px;
+
+    background: #ed5e74;
+
+    .range-handle{
+      position: absolute;
+      top: 7.5px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+
+      background: #fff;
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    }
+  }
+}

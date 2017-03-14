@@ -1,0 +1,21 @@
+{
+  "name": "musicplayer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Patryk Deja <patryk95deja@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/PatrykDeja/musicplayer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "4.7.0"
+  }
+}

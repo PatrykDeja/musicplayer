@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>MusicPlayer</title>
     <link href="https://fonts.googleapis.com/css?family=Rambla:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="app/css/main.css">
 </head>
 <body>
-<div class="player">
-    <div class="main">
+<div class="musicplayer">
+    <div id="player">
         <div class="display">
             <nav>
-
+                <div class="nav-center">
+                    <i class="button fa fa-retweet active" data-button="retweet"></i>
+                    <i class="button fa fa-random active" data-button="random"></i>
+                    <i class="button fa fa-repeat active" data-button="repeat"></i>
+                </div>
+                <i class="fa fa-bars" id="getplaylist" aria-hidden="true"></i>
             </nav>
             <section class="info">
-                <h2>Icona Pop</h2>
-                <h3>Still Don’t Know</h3>
+                <h2 class="author"></h2>
+                <h3 class="title"></h3>
             </section>
         </div>
         <div class="options">
@@ -24,14 +26,27 @@
                     <div class="range-progress"></div>
                     <div class="range-handle"></div>
                 </div>
-                <input type="hidden" name="volume" value="20" data-min="0" data-max="100" data-step="10">
             </div>
-
+            <div class="options-navigation">
+                <i class="btn btn-share"></i>
+                <i id="prev" class="btn btn-prev"></i>
+                <i id="playbutton" class="btn btn-play play">
+                    <i class="center"></i>
+                </i>
+                <i id="next" class="btn btn-next active"></i>
+                <i class="btn btn-heart"></i>
+            </div>
         </div>
     </div>
-    <div class="list">
-
+    <div id="playlist">
+        <nav>
+            <i id="closeplaylist" class="fa fa-reply"  aria-hidden="true"></i>
+            <h2 class="text-center">Playlist</h2>
+        </nav>
+        <section class="list">
+        </section>
     </div>
 </div>
+<script src="app/js/scripts.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     var jsFileList = [
-        'js/musiclist.js',
         'js/main.js'
     ];
     // Project configuration.
@@ -16,6 +15,14 @@ module.exports = function(grunt) {
                 files: {
                     '../css/main.css': 'sass/main.scss'
                 }
+            }
+        },
+        copy: {
+            fontawesome: {
+                expand: true,
+                cwd: 'bower_components/components-font-awesome/fonts',
+                src: '**',
+                dest: '../fonts/'
             }
         },
         autoprefixer: {
@@ -50,16 +57,8 @@ module.exports = function(grunt) {
                 tasks: ['concat']
             }
         },
-        copy: {
-            fontsAwesome: {
-                expand: true,
-                cwd: 'bower_components/components-font-awesome/fonts',
-                src: '**',
-                dest: '../fonts/'
-            }
-        }
     });
     
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'concat', 'watch', 'copy']);
+    grunt.registerTask('default', ['sass', 'copy:fontawesome', 'autoprefixer', 'concat', 'watch']);
 };
